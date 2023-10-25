@@ -1,5 +1,5 @@
 # tpe1-web2
-Trabajo practico especial, primer entrega.
+Trabajo practico especial, segunda entrega.
 
 Integrantes: Melanie San Roman, Micaela Nicole Lopez.
 
