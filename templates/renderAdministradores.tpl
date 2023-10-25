@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 
-    <h2>Bienvenido administrador</h2> //usuario, todavia no se como ponerlo :(
+    <h2>Bienvenido administrador</h2>
     <h4>Administra libros y/o autores</h4>
 
     <ul>
