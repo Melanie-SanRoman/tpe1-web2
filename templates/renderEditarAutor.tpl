@@ -1,7 +1,10 @@
 {include file="header.tpl"}
 <h2>Editar autor</h2>
-    <form action="" method="POST">
+    <form action='../../actualizar/autor' method="POST">
         <table>
+            <tr>
+                <td>Id:<input type="number" name="id" value="{$id}" readonly/></td>
+            </tr>
             <tr>
                 <td>Nombre del autor:<input type="text" name="nombre" value="{$nombre_autor}"/></td>
             </tr>
@@ -15,7 +18,7 @@
                 <td>Nacionalidad:<input type="text" name="nacionalidad" value="{$nacionalidad}"/></td>
             </tr>
         </table>
-        <input type="submit" name="editarAutor" value="actualizar">
+        <input type="submit" name="editar" value="actualizar">
         <a href="../../administrar/autores">Cancelar</a>
     </form>
 </body>

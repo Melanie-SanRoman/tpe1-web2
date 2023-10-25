@@ -73,6 +73,16 @@ switch ($params[0]) {
                 break;
         }
         break;
+    case 'actualizar':
+        switch ($params[1]) {
+            case 'libro':
+                $controllerUser->showActualizarLibro();
+                break;
+            case 'autor':
+                $controllerUser->showActualizarAutor();
+                break;
+        }
+        break;
     case 'agregar':
         switch ($params[1]) {
             case 'libro':

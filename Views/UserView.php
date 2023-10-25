@@ -57,7 +57,11 @@ class UserView{
         $this->smarty->display('./templates/renderEditarAutor.tpl');
     }
     function renderAgregarLibro($autores){
+        foreach($autores as $autor){
+            $id_autor= $autor->ID;
+        }
         $this->smarty->assign('autores',$autores);
+        $this->smarty->assign('id_autor',$id_autor);
         $this->smarty->display('./templates/renderAgregarLibro.tpl');
     }
     function renderAgregarAutor(){

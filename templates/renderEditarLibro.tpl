@@ -16,7 +16,7 @@
             </tr>
             <tr>
                 <td><select name='id_autor' required >
-                    <option selected>{$nombre_autor} {$apellido}</option>
+                    <option value='{$id_autor}' selected>{$nombre_autor} {$apellido}</option>
                     {foreach from=$autores item=autor} 
                         <option value='{$autor->ID}'> {$autor->Nombre_autor} {$autor->Apellido} </option>
                     {/foreach}
@@ -24,7 +24,7 @@
                 </select></td>
             </tr>
         </table>
-        <input type='submit' value='editar'>
+        <input type='submit' name='editar' value='editar'>
         <a href='../../administrar/libros'>Volver</a>
     </form>
 </body>

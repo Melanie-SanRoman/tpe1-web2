@@ -130,4 +130,28 @@ class UserController{
         $this->model->getEliminarAutor($id);
         Header('Location: ../../administrar/autores');
     }
+    function showActualizarLibro(){
+        $this->checkLogIn();
+        if(isset($_POST['editar'])){
+            $id = $_POST['id'];
+            $nombre = $_POST['newLibro'];
+            $genero = $_POST['newGenero'];
+            $lanzamiento = $_POST['newLanzamiento'];
+            $id_autor = $_POST['id_autor']; 
+        }
+        $this->model->getUpdateLibro($id, $nombre, $genero, $lanzamiento,$id_autor);
+        Header('Location:../administrar/libros');
+    }
+    function showActualizarAutor(){
+        $this->checkLogIn();
+        if(isset($_POST['editar'])){
+            $id = $_POST['id'];
+            $nombre = $_POST['nombre'];
+            $apellido = $_POST['apellido'];
+            $nacimiento = $_POST['nacimiento'];
+            $nacionalidad = $_POST['nacionalidad']; 
+        }
+        $this->model->getUpdateAutor($id, $nombre, $apellido, $nacimiento,$nacionalidad);
+        Header('Location:../administrar/autores');
+    }
 }

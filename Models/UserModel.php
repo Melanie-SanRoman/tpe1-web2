@@ -67,6 +67,14 @@ class UserModel{
         $query = $this->db->prepare("DELETE FROM autores WHERE ID=$id");
         $query->execute();
     }
+    function getUpdateLibro($id, $nombre, $genero, $lanzamiento,$id_autor){
+        $query= $this->db->prepare("UPDATE `libros` SET `id_libros`='$id',`Nombre`='$nombre',`Genero`='$genero',`Lanzamiento`='$lanzamiento',`id_autor`='$id_autor' WHERE id_libros='$id'");
+        $query->execute();
+    }
+    function getUpdateAutor($id, $nombre, $apellido, $nacimiento,$nacionalidad){
+        $query= $this->db->prepare("UPDATE autores SET Nombre_autor='$nombre', Apellido='$apellido' WHERE ID='$id'");
+        $query->execute();
+    }
 }   
 
 ?>
